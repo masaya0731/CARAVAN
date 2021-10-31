@@ -14,7 +14,7 @@ class BlogsController < ApplicationController
   def create
     blog = Blog.new(blog_params)
     blog.save
-   
+    @blog = Blog.find(params[:id])
   end
 
   def edit
